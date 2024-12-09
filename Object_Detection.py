@@ -4,7 +4,7 @@ import math
 # start webcam
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
-cap.set(4, 640)
+cap.set(4, 480)
 
 # model
 model = YOLO("best.pt")
@@ -41,7 +41,7 @@ while True:
             font = cv2.FONT_HERSHEY_SIMPLEX
             fontScale = 1
             color = (255, 0, 0)
-            thickness = 2
+            thickness = 1
 
             cv2.putText(img, classNames[cls], org, font, fontScale, color, thickness)
 
