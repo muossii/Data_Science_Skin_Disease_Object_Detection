@@ -14,7 +14,7 @@ classNames = ['Acne-Mild', 'Blackhead', 'Milia', 'cystic', 'pustular']
 
 while True:
     success, img = cap.read()
-    results = model(img, stream=True)
+    results = model(img, stream=True, conf=0.18)
 
     # coordinates
     for r in results:
